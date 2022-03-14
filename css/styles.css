@@ -1,0 +1,174 @@
+:root{
+    --gray-light: rgb(242, 242, 242);
+    --white-75: rgba(255,255,255,.75);
+    --orange:rgb(227, 136, 38);
+    --cyan-medium: rgb(0, 105, 112);
+    --cyan-dark: rgb(0, 66, 65);
+
+    --font-heading: 'Big Shoulders Display', cursive;
+    --font-paragraph: 'Lexend Deca', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    background-color: var(--gray-light);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    padding: 5.5rem 1.5rem;
+}
+
+p{
+    font-size: .9375rem;
+    color: var(--white-75);
+    font-family: var(--font-paragraph);
+}
+
+.three-column-card{
+    width: clamp(20.4375rem, 100%, 57.5rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    height: 27.625rem;
+    padding: 3rem;
+    position: relative;
+}
+
+.card .btn{
+    position: absolute;
+    bottom: 3rem;
+}
+
+.btn{
+    height: 2.5rem;
+    text-align: center;
+    font-family: var(--font-paragraph);
+    line-height: 2.5rem;
+    border-radius: 1.25rem;
+    width: 9rem;
+}
+
+.card.orange .btn{
+    color: var(--orange);
+}
+
+.card.cyan .btn{
+    color: var(--cyan-medium);
+}
+
+.card.darkCyan .btn{
+    color: var(--cyan-dark);
+}
+
+.cta{
+    background-color: var(--gray-light);
+}
+
+.card .btn:hover{
+    cursor: pointer;
+    color: var(--gray-light);
+}
+
+.cta:hover{
+    background-color: transparent;
+    border: 2px solid var(--gray-light);
+}
+
+.start{
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.end{
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.orange{
+    background-color: var(--orange);
+}
+
+.cyan{
+    background-color: var(--cyan-medium);
+}
+
+.darkCyan{
+    background-color: var(--cyan-dark);
+}
+
+.card__icon{
+    height: 2.5rem;
+}
+
+.card__heading{
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--gray-light);
+    margin-top: 2.125rem;
+    margin-bottom: 1.6875rem;
+    line-height: 1;
+}
+
+.card__text{
+    line-height: 1.666;
+}
+
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    position: fixed;
+    bottom: .625rem;
+    width: 100%;
+    font-family: var(--font-paragraph);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+
+@media (min-width: 41.3rem) {
+
+    main{
+        padding-top: 10.6875rem;
+    }
+    .three-column-card{
+        display: flex;
+    }
+
+    .card{
+        height: 31.25rem;
+    }
+
+    .btn{
+        height: 3rem;
+        line-height: 3rem;
+        border-radius: 1.5rem;
+    }
+
+    .btn:hover{
+        line-height: 2.75rem;
+    }
+
+    .start{
+        border-top-left-radius: .5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5rem;
+    }
+
+    .end{
+        border-top-right-radius: .5rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: .5rem;
+    }
+}
